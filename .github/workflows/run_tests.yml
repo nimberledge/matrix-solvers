@@ -1,0 +1,27 @@
+name: 'Run test suite'
+
+on:
+  # Trigger workflow on pushes to any branch
+  push:
+  pull_request:
+    types:
+      [closed]
+    branches:
+      - main
+
+jobs:
+  compile-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Compile and run tests
+        run: |
+          make test
+          bin/test1
+          echo -e "Test suite 1 says all good\n"
+          bin/test2
+          echo -e "Test suite 2 says all good\n"
+          bin/test3 < data/interfaceTest.txt
+          echo -e "Test suite 3 says all good\n"

@@ -1,0 +1,10 @@
+akm — Today at 19:40
+# Ignore everything in this directory
+*
+
+# Except these files
+!.gitignore
+!interfaceTest.txt
+!choltest*.txt
+!jactest*.txt
+!sparsetest*.txt

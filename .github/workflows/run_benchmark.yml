@@ -1,0 +1,19 @@
+name: 'Run benchmark test'
+
+on:
+  # Trigger workflow on pushes to any branch
+  push:
+    branches:
+      - akm-benchmark
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Compile and run benchmark
+        run: |
+          make benchmark
+          bin/benchmark
