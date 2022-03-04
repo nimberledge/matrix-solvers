@@ -23,5 +23,3 @@ jobs:
           echo -e "Test suite 1 says all good\n"
           bin/test2
           echo -e "Test suite 2 says all good\n"
-          bin/test3 < data/interfaceTest.txt
-          echo -e "Test suite 3 says all good\n"
