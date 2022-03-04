@@ -16,7 +16,7 @@ benchmark.o: test/benchmark.cpp
 main.o: src/main.cpp
 	g++ -std=c++17 -c src/main.cpp -o bin/main.o
 
-test: test1 test2 test3
+test: test1 test2
 	echo "tests successfully built"
 
 test1: test1.o Matrix.o
